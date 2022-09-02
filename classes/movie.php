@@ -28,6 +28,11 @@
         public function getDirector(){
             return $this->director;
         }
+
+        public function getActors(){
+            return $this->actors;
+        }
+
         public function addActor($actor){
             return $this->actors[] = $actor;
         }

@@ -17,12 +17,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <?php
-            foreach ($movies as $movie) {
-               echo $movie->getTitle() . " - " . $movie->addActor($interActors);
-            }
-        ?>
-    </div>
+    <?php foreach ($movies as $movie) { ?>
+        <div>
+            
+                <?php echo $movie->getTitle(); ?>
+            
+            <ul>
+                <h5>Actors:</h5>
+                <?php
+                    $actors = $movie->getActors();
+                    foreach ($actors as $actor) { 
+                ?>
+                    
+                <li>
+                    <?php echo $actor; ?>
+                </li>
+
+                <?php } ?>
+            </ul>
+        </div>
+    <?php } ?>
 </body>
 </html>
