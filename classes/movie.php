@@ -13,7 +13,7 @@
         function __construct($_title, $_director, $_actors)
         {
             $this->title = $_title;
-            $this->company = $_director;
+            $this->director = $_director;
             $this->actors = $_actors;
         }
 
@@ -21,12 +21,12 @@
             return $this->title;
         }
 
-        public function getTrama(){
-            return $this->trama;
-        }
-
         public function getDirector(){
             return $this->director;
+        }
+
+        public function getTrama(){
+            return $this->trama;
         }
 
         public function getActors(){
