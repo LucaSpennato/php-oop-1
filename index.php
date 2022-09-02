@@ -1,5 +1,11 @@
 <?php
-    require_once __DIR__ . '/classes/movie.php';
+    require_once __DIR__ . '/classes/Movie.php';
+
+    $movies = [];
+    $interActors = ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"];
+    $marsActors = ["Gary Sinise","Don Cheadle","Tim Robbins", "Connie Nielsen"];
+    $movies[] = new Movie("Interstellar", "Christopher Nolan", $interActors);
+    $movies[] = new Movie("Mission to Mars", "Brian De Palma", $marsActors);
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +17,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <?php
+            foreach ($movies as $movie) {
+               echo $movie->getTitle() . " - " . $movie->addActor($interActors);
+            }
+        ?>
+    </div>
 </body>
 </html>

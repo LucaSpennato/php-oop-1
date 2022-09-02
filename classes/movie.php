@@ -2,19 +2,19 @@
 
     class Movie {
         private $title;
-        private $trama;
         private $director;
-        // private $actors = [];
+        private $actors = [];
+        // private $trama;
         // private $producers = [];
         // private $company;
         // private $releaseYear;
         // private $companyEmail;
         
-        function __construct($_title, $_trama, $_director)
+        function __construct($_title, $_director, $_actors)
         {
             $this->title = $_title;
-            $this->trama = $_trama;
             $this->company = $_director;
+            $this->actors = $_actors;
         }
 
         public function getTitle(){
@@ -27,6 +27,9 @@
 
         public function getDirector(){
             return $this->director;
+        }
+        public function addActor($actor){
+            return $this->actors[] = $actor;
         }
      
     }
